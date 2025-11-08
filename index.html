@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="LCCDO LOGO.webp" type="image/x-icon">
+    <title>TVL 11 - Nationalism</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: pink;
+            min-height: 100vh;
+            padding: 2%;
+            text-align: center;
+        }
+
+        #blue { color: blue; }
+        #yellow { color: yellow; }
+        #red { color: red; }
+
+        #login {
+            height: 80vh;
+        }
+
+        .Enter h1 {
+            font-size: clamp(1.5rem, 2.5vw + 1rem, 3rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .login {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            max-width: 600px;
+            padding: 1rem;
+        }
+
+        .login h1 {
+            font-size: clamp(1rem, 2vw + 0.5rem, 2rem);
+            margin-bottom: 1rem;
+        }
+
+        .login h3 {
+            font-size: clamp(0.9rem, 1.5vw + 0.5rem, 1.5rem);
+            margin-bottom: 1rem;
+        }
+
+        .login #answer {
+            border: 1px solid;
+            border-radius: 1rem;
+            width: 80%;
+            max-width: 20rem;
+            height: clamp(1.5rem, 3vw, 2.5rem);
+            text-align: center;
+            font-size: clamp(1rem, 1.5vw, 2vh);
+            padding: 0.5rem;
+            box-shadow: 0px 4px 1rem rgb(238, 28, 63);
+            color: rgb(255, 118, 141);
+            font-weight: 700;
+            outline: none;
+            margin-bottom: 1rem;
+        }
+
+        #alert {
+            opacity: 0;
+            font-weight: 700;
+            font-size: clamp(1rem, 1.5vw, 2vh);
+            transition: 0.4s ease;
+            transform: translateY(1em);
+            display: flex;
+            justify-content: center;
+            color: red;
+            margin-top: 0.5rem;
+        }
+
+        #alert.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .login #proceed {
+            cursor: pointer;
+            color: red;
+            font-weight: 700;
+            font-size: clamp(1rem, 1.5vw, 2vh);
+            margin-top: 0.5rem;
+        }
+
+        .login #proceed:hover {
+            color: rgb(243, 133, 151);
+            transition: 0.5s ease;
+        }
+
+        /* Responsive tweaks for smaller devices */
+        @media (max-width: 480px) {
+            body {
+                padding: 1rem;
+            }
+
+            .login #answer {
+                width: 90%;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Enter">
+        <h1>
+            <span id="blue">Welcome to </span>
+            <span id="yellow">TVL 11 - NATIONALISM</span>
+            <span id="red"> WEB PAGE!</span>
+        </h1>
+    </div>
+
+    <div class="login">        
+        <input required id="answer" placeholder="Enter the first name of first our adviser">
+        <a id="proceed">Click to proceed</a> 
+        <p id="alert"></p>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
