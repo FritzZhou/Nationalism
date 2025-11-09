@@ -23,7 +23,21 @@
             min-height: 100vh;
             padding: 2%;
             text-align: center;
+            animation: fadeIn 2s ease forwards;
+            background-image: url("bg.avif");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
+
+        @keyframes fadeIn { 
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+    
+}
 
         #blue { color: blue; }
         #yellow { color: yellow; }
@@ -105,22 +119,48 @@
         }
 
         /* Responsive tweaks for smaller devices */
-        @media (max-width: 480px) {
+        @media (max-width: 768px) {
             body {
                 padding: 1rem;
+                flex-direction: column;
             }
 
             .login #answer {
                 width: 90%;
                 font-size: 1rem;
+                                flex-direction: column;
+
             }
         }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0px solid #000;
+    padding: 20px 15px;
+    min-height: 30vh;
+    gap: 1rem;
+    min-width: 20vh;
+    border-radius: 20px;
+    box-shadow: 0px 4px 20px black;
+    box-sizing: border-box;
+    backdrop-filter: blur(6px);
+}
     </style>
 </head>
 
 <body>
     <div class="Enter">
-        <h1>
+        <h1>    <div class="container">
+
             <span id="blue">Welcome to </span>
             <span id="yellow">TVL 11 - NATIONALISM</span>
             <span id="red"> WEB PAGE!</span>
@@ -128,9 +168,10 @@
     </div>
 
     <div class="login">        
-        <input required id="answer" placeholder="Enter the first name of first our adviser">
+        <input required id="answer" placeholder="First name of our current Adviser">
         <a id="proceed">Click to proceed</a> 
         <p id="alert"></p>
+    </div>
     </div>
 
     <script src="index.js"></script>
