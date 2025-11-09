@@ -8,7 +8,7 @@ const button = document.getElementById("proceed");
         const answer = document.getElementById("answer").value;
 
         if (!answer) {
-            alert.textContent = "ANSWER THE QUESTION TO PROCEED";
+            alert.textContent = "answeri oy hahahahaha";
             alert.style.color = "blue";
             alert.classList.add("show");
             setTimeout(() => {
@@ -17,7 +17,7 @@ const button = document.getElementById("proceed");
             return;
         }
 
-        if (answer === "Nizza") {
+        if (answer === "Gilliane") {
             window.location.href = "home.html";
         } else {
             alert.textContent = "MALIIIIIIIIIIII!"
