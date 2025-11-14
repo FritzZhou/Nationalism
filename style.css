@@ -8,7 +8,7 @@
 body {
     overflow-x: hidden;
     background-color: pink;
-    font-family: 'Times New Roman', Times, serif; 
+    font-family: 'Times New Roman', Times, serif; /* Added font-family for consistency */
     animation: fadeIn 2s ease forwards;
     background-image: url("bg.avif");
     background-repeat: no-repeat;
@@ -37,8 +37,8 @@ h1 {
     justify-content: center;
     color: rgb(0, 45, 243);
     font-size: clamp(1rem, 1.5vw + 1rem, 3rem);
-    text-align: center; 
-    padding: 0 1rem; 
+    text-align: center; /* Added for better centering on small screens */
+    padding: 0 1rem; /* Prevent text touching edges */
 }
 
 #NATt {
@@ -55,7 +55,7 @@ h1 {
     gap: 2em;
     margin: 0.3em;
     padding: 0.3rem;
-    flex-wrap: wrap; 
+    flex-wrap: wrap; /* allows wrapping */
     justify-content: center;
 }
 
@@ -66,7 +66,7 @@ h1 {
     color: inherit;
     word-wrap: break-word;
     min-width: 250px;
-
+    /* Prevent text from stretching too tall or narrow */
     max-width: 400px;
 }
 
@@ -92,7 +92,7 @@ img {
     border: 1px solid rgba(255, 255, 255, 0.25);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.34);
     color: white;
-    flex-wrap: wrap; 
+    flex-wrap: wrap; /* wrap on smaller screens */
 }
 
 .nav ul {
@@ -104,7 +104,7 @@ img {
     font-size: clamp(1rem, 1.5vw, 3vh);
     flex-wrap: wrap;
     justify-content: flex-end;
-    margin-left: auto;
+    margin-left: auto; /* push ul to the right */
 }
 
 .nav li {
@@ -117,14 +117,14 @@ img {
     padding-left: 1rem;
     font-size: clamp(1rem, 1.5vw, 1.5rem);
     justify-content: flex-start;
-    white-space: nowrap;
+    white-space: nowrap; /* prevent breaking */
 }
 
 /* Main image gallery */
 main {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; 
+    flex-wrap: wrap; /* images wrap on smaller screens */
     padding: 0 1rem;
 }
 
@@ -147,9 +147,9 @@ main {
 
 @media (max-width: 768px) {
     .text {
-        flex-direction: column; /
+        flex-direction: column; /* stack text vertically */
         gap: 1em;
-        align-items: center; 
+        align-items: center; /* center text blocks */
     }
     img {
         margin: 1rem auto;
@@ -163,11 +163,11 @@ main {
 @media (max-width: 480px) {
     .rnp {
         font-size: 1.8rem;
-        padding: 0 0.5rem; 
+        padding: 0 0.5rem; /* more padding on very small screens */
     }
     .text h3 {
         font-size: 1rem;
-        max-width: 100%; 
+        max-width: 100%; /* allow full width */
     }
     img {
         width: 90%;
@@ -176,7 +176,7 @@ main {
     .nav .section {
         font-size: 1rem;
         margin-bottom: 0.5rem;
-        padding-left: 0; 
+        padding-left: 0; /* remove padding for smaller screens */
     }
     .nav ul {
         gap: 5px;
