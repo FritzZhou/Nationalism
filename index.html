@@ -128,8 +128,20 @@
             .login #answer {
                 width: 90%;
                 font-size: 1rem;
-                                flex-direction: column;
+                flex-direction: column;
 
+            }
+
+            span {
+                padding: 1rem;
+                flex-direction: column;
+                width: 90%;
+                font-size: 1rem;
+            }
+
+            img {
+                height: 30vh;
+                flex-direction: column;
             }
         }
 
@@ -154,6 +166,13 @@
     box-sizing: border-box;
     backdrop-filter: blur(6px);
 }
+
+img {
+    height: 15vh;
+    border-radius: 10rem;
+}
+
+
     </style>
 </head>
 
@@ -168,6 +187,7 @@
     </div>
 
     <div class="login">        
+        <img src="LCCDO.webp">
         <input required id="answer" placeholder="First name of our current Adviser">
         <a id="proceed">Click to proceed</a> 
         <p id="alert"></p>
